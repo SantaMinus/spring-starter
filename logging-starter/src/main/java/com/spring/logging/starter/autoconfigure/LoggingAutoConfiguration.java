@@ -3,9 +3,11 @@ package com.spring.logging.starter.autoconfigure;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.filter.CommonsRequestLoggingFilter;
 
+@ConditionalOnProperty(value = "starter.logging.enabled", havingValue = "true", matchIfMissing = true)
 public class LoggingAutoConfiguration {
     private static final Logger LOGGER = LoggerFactory.getLogger(LoggingAutoConfiguration.class);
 
