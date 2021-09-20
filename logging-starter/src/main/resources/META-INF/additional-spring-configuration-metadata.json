@@ -1,0 +1,10 @@
+{
+  "properties": [
+    {
+      "name": "starter.logging.enabled",
+      "type": "java.lang.Boolean",
+      "defaultValue": true,
+      "description": "A toggle showing whether logging auto-configuration should be enabled or not"
+    }
+  ]
+}

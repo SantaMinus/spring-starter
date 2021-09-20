@@ -4,6 +4,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("starter.logging")
 public class LoggingProperties {
+    /**
+     * Message prefix for request logging
+     */
     private String messagePrefix = "Starter > ";
     private Payload payload = new Payload();
 
@@ -24,6 +27,9 @@ public class LoggingProperties {
     }
 
     public static class Payload {
+        /**
+         * Payload max length to be logged
+         */
         private int maxLength = 100;
 
         public int getMaxLength() {
